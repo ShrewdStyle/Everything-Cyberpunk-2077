@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/7b255ad7e0.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <title>Everything Cyberpunk | Shop</title>
+</head>
+<body>
+    <nav id="main-nav">
+        <div class="container">
+            <img src="img/logoJoined2.png" alt="EverythingCyberpunk" class="logo">
+            <div class="social">
+                <a target="_blank" href="https://linkedin.com/in/jake-knight-811240b1"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="shop-showcase">
+        <div class="container">
+            <div class="shop-showcase-container">
+                <div class="shop-showcase-content">
+                    <h2 id="join-header">Cyberpunk 2077 Shop</h2>
+                    <p id="join-sub">For any additional requests, feel free to contact us <a href="/contact.html"><span id="shop-span">here</span></a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="shopping-cart">
+        <div class="shopping-cart">
+            <div class="title">
+                <ul>
+                    <li>Online Store</li>
+                    <li>Quantity</li>
+                    <li>Price</li>
+                    <li>Subtotal</li>
+                </ul>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="item">
+                <div class="buttons">
+                    <span class="delete-btn"></span>
+                    <span id="like-btn1" class="like-btn"></span>
+                </div>
+
+                <div class="image">
+                    <img src="/img/shop/cup.webp" alt="#">
+                </div>
+
+                <div class="description">
+                    <span>Cyberpunk 2077</span>
+                    <span>Coffee Mug</span>
+                    <span>Multi-color</span>
+                </div>
+
+                <div class="quantity">
+                    <button onclick="Input_ChangeValue(this, '-');" class="minus-btn">
+                        <img src="/img/shop/minus-btn.png" alt="#">
+                    </button>
+                    <input id="valueTest1" onchange="calculateSubTotal(this);" type="text" value="0" data-price="10.99">
+                    <button onclick="Input_ChangeValue(this, '+');" class="plus-btn" >
+                        <img src="/img/shop/plus-btn.png" alt="#">
+                    </button>
+                </div>
+
+                <div id="itemPrice1" class="total-price">£10.99</div>
+                <div id="itemTotal1" class="subtotal-price">£0.00</div>
+            </div>
+            <!-- Product 2 -->
+            <div class="item">
+                <div class="buttons">
+                    <span class="delete-btn"></span>
+                    <span id="like-btn2" class="like-btn"></span>
+                </div>
+
+                <div class="image">
+                    <img src="/img/shop/t-shirt.jpg" alt="#">
+                </div>
+
+                <div class="description">
+                    <span>Cyberpunk 2077</span>
+                    <span>T-Shirt</span>
+                    <span>Multi-color</span>
+                </div>
+
+                <div class="quantity">
+                    <button onclick="Input_ChangeValue(this, '-');" class="minus-btn">
+                        <img src="/img/shop/minus-btn.png" alt="#">
+                    </button>
+                    <input id="valueTest2" onchange="calculateSubTotal(this);" data-price="15.99" type="text" value="0">
+                    <button onclick="Input_ChangeValue(this, '+');" class="plus-btn">
+                        <img src="/img/shop/plus-btn.png" alt="#">
+                    </button>
+                </div>
+
+                <div id="itemPrice2" class="total-price">£15.99</div>
+                <div id="itemTotal2" class="subtotal-price">£0.00</div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="item">
+                <div class="buttons">
+                    <span class="delete-btn"></span>
+                    <span id="like-btn3" class="like-btn"></span>
+                </div>
+
+                <div class="image">
+                    <img src="/img/shop/jacket1.jpg" alt="#">
+                </div>
+
+                <div class="description">
+                    <span>Cyberpunk 2077</span>
+                    <span>Womens Jacket</span>
+                    <span>Dark</span>
+                </div>
+
+                <div class="quantity">
+                    <button onclick="Input_ChangeValue(this, '-');" class="minus-btn">
+                        <img src="/img/shop/minus-btn.png" alt="#">
+                    </button>
+                    <input type="text" id="valueTest3" data-price="24.99" onchange="calculateSubTotal(this);" value="0"></input>
+                    <button onclick="Input_ChangeValue(this, '+');" class="plus-btn">
+                        <img src="/img/shop/plus-btn.png" alt="#">
+                    </button>
+                </div>
+
+                <div id="itemPrice3" class="total-price">£24.99</div>
+                <div id="itemTotal3" class="subtotal-price">£0.00</div>
+            </div>
+            <!-- Product 4 -->
+            <div class="item">
+                <div class="buttons">
+                    <span class="delete-btn"></span>
+                    <span id="like-btn4" class="like-btn"></span>
+                </div>
+
+                <div class="image">
+                    <img src="/img/shop/hat.jpg" alt="#">
+                </div>
+
+                <div class="description">
+                    <span>Cyberpunk 2077</span>
+                    <span>Hat</span>
+                    <span><select name="colors" class="drop-down">
+                        <option class="disabled" value="" disabled selected>Choose a color</option>
+                        <option value="color">Black</option>
+                        <option value="color">Red</option>
+                        <option value="color">Blue</option>
+                        <option value="color">Yellow</option>
+                        <option value="color">Grey</option>
+                        <option value="color">Beige</option>
+                    </select></span>
+                </div>
+
+                <div class="quantity">
+                    <button onclick="Input_ChangeValue(this, '-');" class="minus-btn">
+                        <img src="/img/shop/minus-btn.png" alt="#">
+                    </button>
+                    <input type="text" id="valueTest4" data-price="7.99" onchange="calculateSubTotal(this);" value="0"></input>
+                    <button onclick="Input_ChangeValue(this, '+');" class="plus-btn">
+                        <img src="/img/shop/plus-btn.png" alt="#">
+                    </button>
+                </div>
+
+                <div id="itemPrice4" class="total-price">£7.99</div>
+                <div id="itemTotal4" class="subtotal-price">£0.00</div>
+            </div>
+            <div class="summary">
+                <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+                <div class="summary-subtotal">
+                  <div class="subtotal-title">Subtotal</div>
+                  <div class="subtotal-value final-value" id="basket-subtotal">£0.00</div>
+                </div>
+                <div class="summary-VAT">
+                  <div class="subtotal-title">VAT</div>     
+                  <div class="subtotal-value final-value" id="basket-VAT">£0.00</div>
+                </div>
+                <div class="summary-total">
+                    <div class="total-title">Total</div>
+                    <div class="total-value final-value" data-price="0" id="basket-total">£0.00</div>
+                </div>
+                <div class="summary-checkout">
+                    <button class="checkout-cta">Go to Secure Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer id="main-footer" class="py-2">
+        <div class="container footer-container">
+            <div>
+                <img src="img/logoJoined2.png" alt="EverythingCyberpunk">
+                <p>"The street finds its uses, Cyberpunk isn't about saving humanity... It's about saving yourself." - Mike Pondsmith</p>
+            </div>
+            <div>
+                <h3>Email Newsletter</h3>
+                <p>Subscribe now for all of the most up to date news on all things Cyberpunk</p>
+                <form>
+                    <input type="email" placeholder="Enter Email..">
+                    <input type="submit" value="Subscribe" class="btn btn-primary">
+                </form>
+            </div>
+            <div>
+                <h3>Site Links</h3>
+                <ul class="list">
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/contact.html">Help & Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Join Our Club</h2>
+                <p>Join now and help us in our goal to keep people up to date in all things Cyberpunk related</p>
+                <a href="/our_club.html" class="btn btn-secondary">Join Now</a>
+            </div>
+            <p>Designed and Created by <span> Jake Knight</span> &copy; 2020</p>
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+
+</body>
+</html>
