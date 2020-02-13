@@ -1,22 +1,5 @@
-/* Navigation */
 
-#main-nav .social {
-    display: none;
-}
 
-#main-nav .container {
-    grid-template-columns: 1fr;
-    grid-gap: 1.2rem;
-}
-
-#main-nav ul,
-#main-nav .logo {
-    justify-self: center;
-}
-
-#main-nav ul li a {
-    padding: 0.5rem;
-}
 
 #home-articles .articles-container {
     grid-template-columns: repeat(2, 1fr);
@@ -26,6 +9,54 @@
 #home-articles .articles-container > *:last-child {
     grid-template-columns: 1fr;
     grid-column: 1;
+}
+
+/* TABLETS */
+
+@media (max-width: 1050px){
+    .intro-video{
+        width: 570px; 
+    } 
+    #about .page-container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #main-about {grid-column: 1/4;}
+    #join-about {grid-column: 4/6;}
+    .join-form {
+        width: 430px;
+        height: 350px;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    #join-img {
+        height: 100%;
+        width: 250px;
+    }
+    .join-logo {
+        padding: 0;
+        margin-left: 1.5rem;
+    }
+    /* CONTACT */
+    .form-txt-area {
+        left: 20%;
+        top: 10%;
+    }
+    .contact-form {
+        padding: 2rem;
+        width: 55%;
+    }
+    /* SHOP */
+    #shopping-cart {
+        height: 1100px;
+        padding-bottom: 15rem;
+    }
+    .summary {
+        position: relative;
+        left: 0%;
+        top: 11.5%;
+        width: 50%;
+    }
 }
 
 @media (max-width: 800px) {
@@ -41,8 +72,27 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+    /* SHOP */
+    .title{display: none;}
+    .shopping-cart, #shopping-cart {
+        height: 2300px;
+    }
+    #shopping-cart {
+        padding-bottom: 1rem;
+    }
+    .image {
+        height: 150px;
+        width: 50px;
+    }
     .image img {
-      width: 50%;
+        height: 75%;   
+        width: 200px;
+    }
+    .summary {
+        position: relative;
+        left: 13%;
+        top: 2%;
+        width: 75%;
     }
     .image,
     .quantity,
@@ -56,13 +106,49 @@
     }
 }
 
+@media (max-width: 1000px) {
+    #about .page-container {display: block;}
+    .card {margin-bottom: 1rem;}
+    .intro-video {
+        width: 100%;
+        height: 320px;
+        margin-bottom: .5rem;
+    }
+}
+
 @media(max-width: 600px) {
-    /* Stack Grid Items */
+
+    /* NAV */
+    #main-nav .social {
+        display: none;
+    }
+
+    #main-nav .container {
+        grid-template-columns: 1fr;
+        grid-gap: 1.2rem;
+    }
+
+    #main-nav ul,
+    #main-nav .logo {
+        justify-self: center;
+    }
+
+    #main-nav ul li a {
+        padding: 0.5rem;
+    }
+
     #showcase .showcase-container,
     #home-articles .articles-container,
-    #main-footer .footer-container {
+    #main-footer .footer-container,
+    #club-showcase .club-showcase-container,
+    #shop-showcase .shop-showcase-container,
+    #about-showcase .about-showcase-container,
+    #join-showcase .join-showcase-container {
         grid-template-columns: 1fr;
     }
+    .showcase-content {width: 100%;}
+    #showcase, #showcase:before, .showcase-container, #showcase-wrapper {height: 80vh;}
+    #showcase {padding: 2rem 1rem 1rem 1rem;}
 
     #main-footer .footer-container >*:last-child {
         grid-column: 1;
@@ -90,5 +176,85 @@
 
     .l-heading {
         font-size: 2rem;
+    }
+
+    /* ABOUT */
+
+    #about .page-container {display: block;}
+    .card {margin-bottom: 1rem;}
+    .intro-video {
+        width: 100%;
+        height: 320px;
+        margin-bottom: .5rem;
+    }
+
+    /* SHOP */
+
+    .title{display: none;}
+    .shopping-cart, #shopping-cart {
+        height: 2100px;
+    }
+    .image {
+        height: 150px;
+        width: 150px;
+    }
+    .image img {
+        height: 100%;   
+        width: 100%;
+    }
+    .like-btn {
+        top: 31.3px;
+        left: -30px;
+    }
+    .summary {
+
+        position: relative;
+        left: 0%;
+        bottom: -2%;
+        width: 100%;
+    }
+    /* JOIN THE CLUB */
+
+    #club-form {height: 700px;}
+    .form-container{
+        display: block;
+        height: 700px;
+    }
+    #join-wrapper {padding: .7rem;}
+    .join-form {
+        width: 330px;
+        height: 350px;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    .join-form input {
+        height: 40px;
+    }
+    .join-form label {
+        font-size: .8rem;
+        text-align: end;
+    }
+    #join-img {
+        height: 100%;
+        width: 300px;
+        margin-top: 4rem;
+    }
+    .join-logo {
+        padding: 1rem;
+    }
+
+    /* CONTACT */
+
+    .form-txt-area {
+        left: 5%;
+        top: -2%;
+    }
+    .contact-form {
+        padding: 2rem;
+        width: 100%;
+    }
+    .contact-container{
+        display: block;
+        padding-top: 3rem;
     }
 }

@@ -7,9 +7,9 @@
     <script src="https://kit.fontawesome.com/7b255ad7e0.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="/css/mobile.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <title>Everything Cyberpunk | Shop</title>
+    <title>Everything Cyberpunk | News</title>
 </head>
 <body>
     <nav id="main-nav">
@@ -29,17 +29,6 @@
         </div>
     </nav>
 
-    <header id="shop-showcase">
-        <div class="container">
-            <div class="shop-showcase-container">
-                <div class="shop-showcase-content">
-                    <h2 id="join-header">Cyberpunk 2077 Shop</h2>
-                    <p id="join-sub">For any additional requests, feel free to contact us <a href="/contact.html"><span id="shop-span">here</span></a></p>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <section id="shopping-cart">
         <div class="shopping-cart">
             <div class="title">
@@ -55,7 +44,7 @@
             <div class="item">
                 <div class="buttons">
                     <span class="delete-btn"></span>
-                    <span id="like-btn1" class="like-btn"></span>
+                    <span class="like-btn"></span>
                 </div>
 
                 <div class="image">
@@ -69,11 +58,11 @@
                 </div>
 
                 <div class="quantity">
-                    <button onclick="Input_ChangeValue(this, '-');" class="minus-btn">
+                    <button onclick="buttonRemove1()" class="minus-btn">
                         <img src="/img/shop/minus-btn.png" alt="#">
                     </button>
-                    <input id="valueTest1" onchange="calculateSubTotal(this);" type="text" value="0" data-price="10.99">
-                    <button onclick="Input_ChangeValue(this, '+');" class="plus-btn" >
+                    <input id="valueTest1" onchange="calculateSubTotal()" type="text" value="0" data-price="10.99">
+                    <button onclick="buttonClick1()" class="plus-btn" >
                         <img src="/img/shop/plus-btn.png" alt="#">
                     </button>
                 </div>
@@ -85,7 +74,7 @@
             <div class="item">
                 <div class="buttons">
                     <span class="delete-btn"></span>
-                    <span id="like-btn2" class="like-btn"></span>
+                    <span class="like-btn"></span>
                 </div>
 
                 <div class="image">
@@ -99,24 +88,24 @@
                 </div>
 
                 <div class="quantity">
-                    <button onclick="Input_ChangeValue(this, '-');" class="minus-btn">
+                    <button onclick="buttonRemove2()" class="minus-btn">
                         <img src="/img/shop/minus-btn.png" alt="#">
                     </button>
-                    <input id="valueTest2" onchange="calculateSubTotal(this);" data-price="15.99" type="text" value="0">
-                    <button onclick="Input_ChangeValue(this, '+');" class="plus-btn">
+                    <input id="valueTest2" type="text" value="0">
+                    <button onclick="buttonClick2()" class="plus-btn">
                         <img src="/img/shop/plus-btn.png" alt="#">
                     </button>
                 </div>
 
-                <div id="itemPrice2" class="total-price">£15.99</div>
-                <div id="itemTotal2" class="subtotal-price">£0.00</div>
+                <div id="itemPrice2" class="total-price">£<span>15.99</span></div>
+                <div id="itemTotal2" class="subtotal-price">£<span>0.00</span></div>
             </div>
 
             <!-- Product 3 -->
             <div class="item">
                 <div class="buttons">
                     <span class="delete-btn"></span>
-                    <span id="like-btn3" class="like-btn"></span>
+                    <span class="like-btn"></span>
                 </div>
 
                 <div class="image">
@@ -130,69 +119,27 @@
                 </div>
 
                 <div class="quantity">
-                    <button onclick="Input_ChangeValue(this, '-');" class="minus-btn">
+                    <button onclick="buttonRemove3()" class="minus-btn">
                         <img src="/img/shop/minus-btn.png" alt="#">
                     </button>
-                    <input type="text" id="valueTest3" data-price="24.99" onchange="calculateSubTotal(this);" value="0"></input>
-                    <button onclick="Input_ChangeValue(this, '+');" class="plus-btn">
+                    <input type="text" id="valueTest3" value="0"></input>
+                    <button onclick="buttonClick3()" class="plus-btn">
                         <img src="/img/shop/plus-btn.png" alt="#">
                     </button>
                 </div>
 
-                <div id="itemPrice3" class="total-price">£24.99</div>
-                <div id="itemTotal3" class="subtotal-price">£0.00</div>
+                <div id="itemPrice3" class="total-price">£<span>24.99</span></div>
+                <div id="itemTotal3" class="subtotal-price">£<span>0.00</span></div>
             </div>
-            <!-- Product 4 -->
-            <div class="item">
-                <div class="buttons">
-                    <span class="delete-btn"></span>
-                    <span id="like-btn4" class="like-btn"></span>
-                </div>
-
-                <div class="image">
-                    <img src="/img/shop/hat.jpg" alt="#">
-                </div>
-
-                <div class="description">
-                    <span>Cyberpunk 2077</span>
-                    <span>Hat</span>
-                    <span><select name="colors" class="drop-down">
-                        <option class="disabled" value="" disabled selected>Choose a color</option>
-                        <option value="color">Black</option>
-                        <option value="color">Red</option>
-                        <option value="color">Blue</option>
-                        <option value="color">Yellow</option>
-                        <option value="color">Grey</option>
-                        <option value="color">Beige</option>
-                    </select></span>
-                </div>
-
-                <div class="quantity">
-                    <button onclick="Input_ChangeValue(this, '-');" class="minus-btn">
-                        <img src="/img/shop/minus-btn.png" alt="#">
-                    </button>
-                    <input type="text" id="valueTest4" data-price="7.99" onchange="calculateSubTotal(this);" value="0"></input>
-                    <button onclick="Input_ChangeValue(this, '+');" class="plus-btn">
-                        <img src="/img/shop/plus-btn.png" alt="#">
-                    </button>
-                </div>
-
-                <div id="itemPrice4" class="total-price">£7.99</div>
-                <div id="itemTotal4" class="subtotal-price">£0.00</div>
-            </div>
-            <div class="summary" id="shop-summary">
+            <div class="summary">
                 <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
                 <div class="summary-subtotal">
                   <div class="subtotal-title">Subtotal</div>
-                  <div class="subtotal-value final-value" id="basket-subtotal">£0.00</div>
-                </div>
-                <div class="summary-VAT">
-                  <div class="subtotal-title">VAT</div>     
-                  <div class="subtotal-value final-value" id="basket-VAT">£0.00</div>
+                  <div class="subtotal-value final-value" id="basket-subtotal">£<span>130.00</span></div>
                 </div>
                 <div class="summary-total">
                     <div class="total-title">Total</div>
-                    <div class="total-value final-value" data-price="0" id="basket-total">£0.00</div>
+                    <div class="total-value final-value" id="basket-total">£<span>130.00</span></div>
                 </div>
                 <div class="summary-checkout">
                     <button class="checkout-cta">Go to Secure Checkout</button>
@@ -221,15 +168,16 @@
             <div>
                 <h3>Site Links</h3>
                 <ul class="list">
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/contact.html">Help & Support</a></li>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h2>Join Our Club</h2>
                 <p>Join now and help us in our goal to keep people up to date in all things Cyberpunk related</p>
-                <a href="/our_club.html" class="btn btn-secondary">Join Now</a>
+                <a href="#" class="btn btn-secondary">Join Now</a>
             </div>
             <p>Designed and Created by <span> Jake Knight</span> &copy; 2020</p>
         </div>

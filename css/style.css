@@ -770,6 +770,13 @@ input:focus {
     left: 15%;
     top: 10%;
 }
+.contact-container{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
 .contact-form {
     display: flex;
     flex-direction: column;
